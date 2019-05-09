@@ -1,3 +1,12 @@
+'''
+Author:Paul Caron
+Date:May 4,2019
+name:wikipedia_scraper.py
+version:1.0
+license:fair use
+https://github.com/nacmop/
+'''
+
 import urllib.request,urllib.error
 from html.parser import HTMLParser
 import sys, codecs
@@ -25,7 +34,7 @@ print("\nstatus code:",status)
 html = str(resp.read())
 
 class MyHTMLParser(HTMLParser): 
-    def init(self):
+    def __init__(self):
         super().__init__()
         self.p=False
         self.pbuf=[]
